@@ -35,14 +35,14 @@ class HencoopScreen extends StatelessWidget {
                 color: Colors.black,
                 child: Center(
                   child: Text(
-                      "${henc.isOnline ? "açık" : "kapalı"}\n${henc.lastDate}\n${henc.lastTime}\n${henc.reasonStr}",
+                      "${henc.isOnline==true ? "açık" : "kapalı"}\n${henc.lastDate}\n${henc.lastTime}\n${henc.reasonStr}",
                       textAlign: TextAlign.center,
                       style:
                       TextStyle(fontSize: 10.0, color: Colors.white)),
                 ),
               ),
               title: Text(
-                  "${henc.licensePlate} (${henc.sensorCount} sensör)\nElektrik ${henc.powerStatus ? "var" : "yok"}\nSıcaklık: ${henc.temperature}°C\nNem: %${henc.humidity}",
+                  "${henc.licensePlate} (${henc.sensorCount} sensör)\nElektrik ${henc.powerStatus==true ? "var" : "yok"}\nSıcaklık: ${henc.temperature}°C\nNem: %${henc.humidity}",
                   style: TextStyle(fontSize: 11.0, color: Colors.black)),
               onTap: () {
                 var cens = Sensor(

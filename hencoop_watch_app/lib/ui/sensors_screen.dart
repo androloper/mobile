@@ -34,7 +34,7 @@ class SensorsScreen extends State<Sensors> {
                     height: 80.0,
                     color: Colors.black,
                     child: Center(
-                      child: Text("${cen.isOnline ? "açık" : "kapalı"}\n${widget.cens.lastDate}\n${widget.cens.lastTime}",
+                      child: Text("${cen.isOnline==true ? "açık" : "kapalı"}\n${widget.cens.lastDate}\n${widget.cens.lastTime}",
                           textAlign: TextAlign.center,
                           style:
                           TextStyle(fontSize: 11.0, color: Colors.white)),
