@@ -7,6 +7,7 @@ import '../models/movies_model.dart';
 class MovieApiProvider {
   final _baseUrl = "http://api.themoviedb.org/3/movie";
   final _apiKey = "your_api_key";
+  //there is an api key in notification in themoviedb.org
 
   Future<Movies> fetchMovieList() async {
     final response = await http.get(Uri.parse("$_baseUrl/popular?api_key=$_apiKey"));
