@@ -293,6 +293,8 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.only(bottom: 24.0),
               child: ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(Colors.amberAccent)),
                 child: Text("Login"),
                 onPressed: () async{
                   SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -519,6 +521,8 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.only(bottom: 24.0),
               child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.amberAccent)),
                 child: Text("Register"),
                 onPressed: () async{
                   registerFormKey.currentState!.save();
