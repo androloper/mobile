@@ -9,13 +9,14 @@ import 'package:http/http.dart' as http;
 
 class APIService {
   var wp = new Webpages();
-  static LoginRequestModel? lrm;
+  static late LoginRequestModel lrm;
 
-  Future<http.Response> login(LoginRequestModel loginRequestModel) async {
+  Future<http.Response> login(LoginRequestModel? loginRequestModel) async {
+    lrm = loginRequestModel!;
     Map<String, String> headers = new Map();
     headers["Content-Type"] =
     "application/x-www-form-urlencoded; charset=UTF-8";
-    var data = {"UserName": '${loginRequestModel.username}', "Password": '${loginRequestModel.password}'};
+    var data = {"UserName": '${loginRequestModel!.username}', "Password": '${loginRequestModel.password}'};
     var parts = [];
     data.forEach((key, value) {
       parts.add('${Uri.encodeQueryComponent(key)}='
@@ -30,7 +31,7 @@ class APIService {
     Map<String, String> headers = new Map();
     headers["Content-Type"] =
     "application/x-www-form-urlencoded; charset=UTF-8";
-    var data = {"UserName": '${lrm!.username}', "Password": '${lrm!.password}'};
+    var data = {"UserName": '${lrm.username}', "Password": '${lrm.password}'};
     var parts = [];
     data.forEach((key, value) {
       parts.add('${Uri.encodeQueryComponent(key)}='
@@ -55,7 +56,7 @@ class APIService {
     Map<String, String> headers = new Map();
     headers["Content-Type"] =
     "application/x-www-form-urlencoded; charset=UTF-8";
-    var data = {"UserName": '${lrm!.username}', "Password": '${lrm!.password}'};
+    var data = {"UserName": '${lrm.username}', "Password": '${lrm.password}'};
     var parts = [];
     data.forEach((key, value) {
       parts.add('${Uri.encodeQueryComponent(key)}='
@@ -80,7 +81,7 @@ class APIService {
     Map<String, String> headers = new Map();
     headers["Content-Type"] =
     "application/x-www-form-urlencoded; charset=UTF-8";
-    var data = {"UserName": '${lrm!.username}', "Password": '${lrm!.password}'};
+    var data = {"UserName": '${lrm.username}', "Password": '${lrm.password}'};
     var parts = [];
     data.forEach((key, value) {
       parts.add('${Uri.encodeQueryComponent(key)}='
@@ -105,7 +106,7 @@ class APIService {
     Map<String, String> headers = new Map();
     headers["Content-Type"] =
     "application/x-www-form-urlencoded; charset=UTF-8";
-    var data = {"UserName": '${lrm!.username}', "Password": '${lrm!.password}'};
+    var data = {"UserName": '${lrm.username}', "Password": '${lrm.password}'};
     var parts = [];
     data.forEach((key, value) {
       parts.add('${Uri.encodeQueryComponent(key)}='

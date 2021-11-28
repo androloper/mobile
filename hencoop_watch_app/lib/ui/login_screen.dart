@@ -44,7 +44,6 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget _uiSetup(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Theme.of(context).accentColor,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -71,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: 25),
                         Text(
                           "Kümescell Giriş Ekranı",
-                          style: Theme.of(context).textTheme.headline2,
+                          style: TextStyle(fontSize: 24),
                         ),
                         SizedBox(height: 20),
                         new TextFormField(
