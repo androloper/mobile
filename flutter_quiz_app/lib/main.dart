@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                         width: 10.0,
                       ),
                       FilterChip(
-                        backgroundColor: Colors.indigo,
+                        backgroundColor: results[index].difficulty=='easy' ? Colors.greenAccent : results[index].difficulty=='medium' ?  Colors.orangeAccent : Colors.redAccent,
                         label: Text(
                           results[index].difficulty!.toUpperCase(),
                           style: TextStyle(color: Colors.white),
