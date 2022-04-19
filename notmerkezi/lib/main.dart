@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notmerkezi/market/services/market_api.dart';
 import 'package:notmerkezi/ui/widgets/kf-drawer/class_builder.dart';
 import 'package:notmerkezi/ui/widgets/kf-drawer/main_widget.dart';
 import 'package:notmerkezi/ui/widgets/loading/loading_screen.dart';

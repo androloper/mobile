@@ -39,6 +39,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     //   );
     // }
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.amberAccent,
@@ -58,14 +59,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
-                            primary: Colors.indigoAccent
+                            primary: Colors.indigo
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                           child: Text("Şifremi Değiştir",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: height*.03, color: CupertinoColors.white)),
+                                      fontSize: height*.03, color: Colors.amberAccent)),
                         ),
                         onPressed: () async {
                           Navigator.push(
@@ -85,14 +86,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
-                            primary: Colors.indigoAccent
+                            primary: Colors.indigo
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                           child: Text("Hakkımızda",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: height*.03, color: CupertinoColors.white)),
+                                      fontSize: height*.03, color: Colors.amberAccent)),
                         ),
                         onPressed: () async {
                           Navigator.push(
@@ -112,14 +113,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
-                            primary: Colors.indigoAccent
+                            primary: Colors.indigo
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                           child: Text("Destek",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: height*.03, color: CupertinoColors.white)),
+                                      fontSize: height*.03, color: Colors.amberAccent)),
                         ),
                         onPressed: () async {
                           Navigator.push(
@@ -139,14 +140,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50)),
-                            primary: Colors.indigoAccent
+                            primary: Colors.indigo
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                           child: Text("Çıkış Yap",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: height*.03, color: CupertinoColors.white)),
+                                      fontSize: height*.03, color: Colors.amberAccent)),
                         ),
                         onPressed: () async {
                           //api request for logout

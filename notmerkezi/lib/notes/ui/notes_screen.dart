@@ -26,6 +26,12 @@ class _NotesScreenState extends State<NotesScreen> {
     //   );
     // }
     return Scaffold(
+      backgroundColor: Colors.grey,
+      appBar: AppBar(
+        foregroundColor: Colors.amberAccent,
+        backgroundColor: Colors.indigo,
+        title: Text('Notlarım'),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -39,14 +45,14 @@ class _NotesScreenState extends State<NotesScreen> {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)),
-                          primary: Colors.indigoAccent
+                          primary: Colors.indigo
                       ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                         child: Text("Aldıklarım",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: height*.03, color: CupertinoColors.white)),
+                                fontSize: height*.03, color:Colors.amberAccent)),
                       ),
                       onPressed: () async {
                         Navigator.push(
@@ -66,14 +72,14 @@ class _NotesScreenState extends State<NotesScreen> {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)),
-                          primary: Colors.indigoAccent
+                          primary: Colors.indigo
                       ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                         child: Text("Yüklediklerim",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: height*.03, color: CupertinoColors.white)),
+                                fontSize: height*.03, color:Colors.amberAccent)),
                       ),
                       onPressed: () async {
                         Navigator.push(
@@ -93,14 +99,14 @@ class _NotesScreenState extends State<NotesScreen> {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50)),
-                          primary: Colors.indigoAccent
+                          primary: Colors.indigo
                       ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
                         child: Text("Favorilerim",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: height*.03, color: CupertinoColors.white)),
+                                fontSize: height*.03, color:Colors.amberAccent)),
                       ),
                       onPressed: () async {
                         Navigator.push(

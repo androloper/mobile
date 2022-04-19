@@ -20,57 +20,58 @@ class _PdfViewerScreenState extends State<PdfViewerScreen> {
   @override
   Widget build(BuildContext context) {
     final name = basename(widget.file!.path);
-    if(Platform.isIOS){
-      return CupertinoPageScaffold(
-        // navigationBar: CupertinoNavigationBar(
-        //   leading: const CupertinoNavigationBarBackButton(
-        //     color: CupertinoColors.white,
-        //   ),
-        //   middle: Text(name, style: const TextStyle(color:CupertinoColors.white)),
-        //   backgroundColor: Colors.indigo,
-        //   trailing: pages>=2 ? Row(
-        //     mainAxisAlignment: MainAxisAlignment.end,
-        //     mainAxisSize: MainAxisSize.min,
-        //     children: [
-        //       CupertinoButton(
-        //         padding: const EdgeInsets.all(0),
-        //         child: const Icon(Icons.west,
-        //           size: 24,
-        //           color: CupertinoColors.white
-        //         ),
-        //         onPressed: () {
-        //           final page = indexPage == pages ? pages : indexPage - 1;
-        //           controller!.setPage(page);
-        //         },
-        //       ),
-        //       CupertinoButton(
-        //         padding: const EdgeInsets.all(0),
-        //         child: const Icon(Icons.east,
-        //           size: 24,
-        //           color: CupertinoColors.white
-        //         ),
-        //         onPressed: () {
-        //           final page = indexPage == pages - 1 ? pages : indexPage + 1;
-        //           controller!.setPage(page);
-        //         },
-        //       ),
-        //     ],
-        //   ) : null,
-        // ),
-        child: PDFView(
-          filePath: widget.file!.path,
-          onRender: (pages) => setState(() => this.pages = pages!),
-          onViewCreated: (controller) =>
-              setState(() => this.controller = controller),
-          onPageChanged: (indexPage, _) =>
-              setState(() => this.indexPage = indexPage!),
-        ),
-      );
-    }
+    // if(Platform.isIOS){
+    //   return CupertinoPageScaffold(
+    //     // navigationBar: CupertinoNavigationBar(
+    //     //   leading: const CupertinoNavigationBarBackButton(
+    //     //     color: CupertinoColors.white,
+    //     //   ),
+    //     //   middle: Text(name, style: const TextStyle(color:CupertinoColors.white)),
+    //     //   backgroundColor: Colors.indigo,
+    //     //   trailing: pages>=2 ? Row(
+    //     //     mainAxisAlignment: MainAxisAlignment.end,
+    //     //     mainAxisSize: MainAxisSize.min,
+    //     //     children: [
+    //     //       CupertinoButton(
+    //     //         padding: const EdgeInsets.all(0),
+    //     //         child: const Icon(Icons.west,
+    //     //           size: 24,
+    //     //           color: CupertinoColors.white
+    //     //         ),
+    //     //         onPressed: () {
+    //     //           final page = indexPage == pages ? pages : indexPage - 1;
+    //     //           controller!.setPage(page);
+    //     //         },
+    //     //       ),
+    //     //       CupertinoButton(
+    //     //         padding: const EdgeInsets.all(0),
+    //     //         child: const Icon(Icons.east,
+    //     //           size: 24,
+    //     //           color: CupertinoColors.white
+    //     //         ),
+    //     //         onPressed: () {
+    //     //           final page = indexPage == pages - 1 ? pages : indexPage + 1;
+    //     //           controller!.setPage(page);
+    //     //         },
+    //     //       ),
+    //     //     ],
+    //     //   ) : null,
+    //     // ),
+    //     child: PDFView(
+    //       filePath: widget.file!.path,
+    //       onRender: (pages) => setState(() => this.pages = pages!),
+    //       onViewCreated: (controller) =>
+    //           setState(() => this.controller = controller),
+    //       onPageChanged: (indexPage, _) =>
+    //           setState(() => this.indexPage = indexPage!),
+    //     ),
+    //   );
+    // }
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.indigo,
+        foregroundColor: Colors.amberAccent,
         title: Text(name),
         actions: pages >= 2
             ? [
