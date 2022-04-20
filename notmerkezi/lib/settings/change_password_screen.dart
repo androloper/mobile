@@ -29,6 +29,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     // if(Platform.isIOS){
     //   return GestureDetector(
     //     onTap: () => FocusScope.of(context).unfocus(),
@@ -132,7 +133,10 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        backgroundColor: Colors.grey,
         appBar: AppBar(
+          backgroundColor: Colors.indigo,
+          foregroundColor: Colors.amberAccent,
           title: Text("Hesap Bilgileri"),
         ),
         body: SingleChildScrollView(
@@ -162,7 +166,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           controller: emailController,
                           enabled: false,
                           decoration: InputDecoration(
-                            prefixText: "E-posta: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "E-posta",
                             border: OutlineInputBorder(
@@ -178,7 +181,6 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         child: TextFormField(
                           controller: pwdController,
                           decoration: InputDecoration(
-                            prefixText: "Şifre: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Şifre",
                             border: OutlineInputBorder(
@@ -192,18 +194,28 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 8, 0, 16),
-                        child: ElevatedButton(
-                          child: Text("Güncelle"),
-                          onPressed: () async {
-                            formKey.currentState!.save();
-                            if (formKey.currentState!.validate()) {
-                              // await api.updateAccount(emailController.text, pwdController.text);
-                              Navigator.pop(context);
-                            }
-                          },
+                        padding: const EdgeInsets.only(bottom: 16.0),
+                        child: SizedBox(
+                            width: width*.4,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(50)),
+                                    primary: Colors.indigo
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+                                  child: Text("Güncelle",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize: 20, color:Colors.amberAccent)),
+                                ),
+                                onPressed: () async {
+                                  //api request
+                                }
+                            )
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

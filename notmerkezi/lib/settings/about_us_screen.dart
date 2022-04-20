@@ -20,6 +20,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
     //   );
     // }
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         foregroundColor: Colors.amberAccent,
         backgroundColor: Colors.indigo,

@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:notmerkezi/market/services/market_api.dart';
+import 'package:notmerkezi/market/ui/sell_screen.dart';
 
 import '../../market/models/market_demo.dart';
 import '../../ui/widgets/loading/loading_screen.dart';
@@ -71,7 +72,7 @@ class _UploadedNotesScreenState extends State<UploadedNotesScreen> {
                               foregroundColor: Colors.black,
                               icon: Icons.monetization_on_outlined,
                               onTap: () async {
-                                // Navigator.push(context, CupertinoPageRoute(builder: (context) => SpecificProductionScreen(locId: widget.location.id,)));
+                                Navigator.push(context, CupertinoPageRoute(builder: (context) => SellScreen(data: notes[index],)));
                               },
                             ),
                             IconSlideAction(

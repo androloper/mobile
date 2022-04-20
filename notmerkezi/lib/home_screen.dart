@@ -39,13 +39,13 @@ class _HomeScreenState extends State<HomeScreen> {
     //           child: Stack(
     //             children: <Widget>[
     //               Container(
-    //                 color: Colors.indigoAccent,
+    //                 color: Colors.indigo,
     //                 height: 40,
     //               ),
     //               Container(
     //                 decoration: BoxDecoration(
     //                   borderRadius: BorderRadius.circular(35),
-    //                   color: Colors.indigoAccent,
+    //                   color: Colors.indigo,
     //                 ),
     //                 child: Padding(
     //                   padding: const EdgeInsets.only(top: 30),
@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                           style: ButtonStyle(
     //                               backgroundColor:
     //                               MaterialStateProperty.all<Color>(
-    //                                   Colors.indigoAccent)),
+    //                                   Colors.indigo)),
     //                           child: Column(
     //                             children: [
     //                               Padding(
@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                               Text(
     //                                 "Not Marketi",
     //                                 style: TextStyle(
-    //                                     fontSize: 18.0, color: CupertinoColors.black),
+    //                                     fontSize: 18.0, color: Colors.amberAccent),
     //                               ),
     //                             ],
     //                           ),
@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                           style: ButtonStyle(
     //                               backgroundColor:
     //                               MaterialStateProperty.all<Color>(
-    //                                   Colors.indigoAccent)),
+    //                                   Colors.indigo)),
     //                           child: Column(
     //                             children: [
     //                               Padding(
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                               Text(
     //                                 "Notlarım",
     //                                 style: TextStyle(
-    //                                     fontSize: 18.0, color: CupertinoColors.black),
+    //                                     fontSize: 18.0, color: Colors.amberAccent),
     //                               ),
     //                             ],
     //                           ),
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                           style: ButtonStyle(
     //                               backgroundColor:
     //                               MaterialStateProperty.all<Color>(
-    //                                   Colors.indigoAccent)),
+    //                                   Colors.indigo)),
     //                           child: Column(
     //                             children: [
     //                               Padding(
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                               Text(
     //                                 "Hesabım",
     //                                 style: TextStyle(
-    //                                     fontSize: 18.0, color: CupertinoColors.black),
+    //                                     fontSize: 18.0, color: Colors.amberAccent),
     //                               ),
     //                             ],
     //                           ),
@@ -205,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                           style: ButtonStyle(
     //                               backgroundColor:
     //                               MaterialStateProperty.all<Color>(
-    //                                   Colors.indigoAccent)),
+    //                                   Colors.indigo)),
     //                           child: Column(
     //                             children: [
     //                               Padding(
@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //                               Text(
     //                                 "Ayarlar",
     //                                 style: TextStyle(
-    //                                     fontSize: 18.0, color: CupertinoColors.black),
+    //                                     fontSize: 18.0, color: Colors.amberAccent),
     //                               ),
     //                             ],
     //                           ),
@@ -243,13 +243,13 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Stack(
               children: <Widget>[
                 Container(
-                  color: Colors.indigoAccent,
+                  color: Colors.indigo,
                   height: 40,
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
-                    color: Colors.indigoAccent,
+                    color: Colors.indigo,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(top: 30),
@@ -304,17 +304,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: ButtonStyle(
                                 backgroundColor:
                                 MaterialStateProperty.all<Color>(
-                                    Colors.indigoAccent)),
+                                    Colors.indigo)),
                             child: Column(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30.0),
-                                  child: Icon(Icons.business, size: 80, color: Colors.amberAccent,),
+                                  child: Icon(Icons.list, size: 80, color: Colors.amberAccent,),
                                 ),
                                 Text(
                                   "Not Marketi",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: CupertinoColors.black),
+                                      fontSize: 18.0, color: Colors.amberAccent),
                                 ),
                               ],
                             ),
@@ -339,7 +339,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: ButtonStyle(
                                 backgroundColor:
                                 MaterialStateProperty.all<Color>(
-                                    Colors.indigoAccent)),
+                                    Colors.indigo)),
                             child: Column(
                               children: [
                                 Padding(
@@ -349,7 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "Notlarım",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: CupertinoColors.black),
+                                      fontSize: 18.0, color: Colors.amberAccent),
                                 ),
                               ],
                             ),
@@ -374,17 +374,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: ButtonStyle(
                                 backgroundColor:
                                 MaterialStateProperty.all<Color>(
-                                    Colors.indigoAccent)),
+                                    Colors.indigo)),
                             child: Column(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30.0),
-                                  child: Icon(Icons.list, size: 80, color: Colors.amberAccent,),
+                                  child: Icon(Icons.contact_page_outlined, size: 80, color: Colors.amberAccent,),
                                 ),
                                 Text(
                                   "Hesabım",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: CupertinoColors.black),
+                                      fontSize: 18.0, color: Colors.amberAccent),
                                 ),
                               ],
                             ),
@@ -409,17 +409,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: ButtonStyle(
                                 backgroundColor:
                                 MaterialStateProperty.all<Color>(
-                                    Colors.indigoAccent)),
+                                    Colors.indigo)),
                             child: Column(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(top: 30.0),
-                                  child: Icon(Icons.contact_page_outlined, size: 80, color: Colors.amberAccent,),
+                                  child: Icon(Icons.settings, size: 80, color: Colors.amberAccent,),
                                 ),
                                 Text(
                                   "Ayarlar",
                                   style: TextStyle(
-                                      fontSize: 18.0, color: CupertinoColors.black),
+                                      fontSize: 18.0, color: Colors.amberAccent),
                                 ),
                               ],
                             ),

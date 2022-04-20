@@ -28,55 +28,55 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
         KFDrawerItem.initWithPage(
           text: Text('Ana Sayfa',
               style: TextStyle(
-                  color: Colors.indigo,
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.home, color: Colors.indigo),
+          icon: Icon(Icons.home, color: Colors.white),
           page: HomeScreen(),
         ),
         KFDrawerItem.initWithPage(
           text: Text('Not Marketi',
               style: TextStyle(
-                  color: Colors.indigo,
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.indigo),
+          icon: Icon(Icons.business, color: Colors.white),
           page: MarketScreen(),
         ),
         KFDrawerItem.initWithPage(
           text: Text('Notlarım',
               style: TextStyle(
-                  color: Colors.indigo,
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.indigo),
+          icon: Icon(Icons.business, color: Colors.white),
           page: NotesScreen(),
         ),
         // KFDrawerItem.initWithPage(
         //   text: Text('Hesabım',
         //       style: TextStyle(
-        //           color: Colors.indigo,
+        //           color: Colors.white,
         //           fontSize: 16,
         //           fontWeight: FontWeight.w400)),
-        //   icon: Icon(Icons.business, color: Colors.indigo),
+        //   icon: Icon(Icons.business, color: Colors.white),
         //   page: AccountScreen(account: null,),
         // ),
         KFDrawerItem.initWithPage(
           text: Text('Ayarlar',
               style: TextStyle(
-                  color: Colors.indigo,
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.indigo),
+          icon: Icon(Icons.business, color: Colors.white),
           page: SettingsScreen(),
         ),
         KFDrawerItem.initWithPage(
           text: Text('Destek',
               style: TextStyle(
-                  color: Colors.indigo,
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.indigo),
+          icon: Icon(Icons.business, color: Colors.white),
           page: SupportScreen(),
         ),
       ],
@@ -114,10 +114,10 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
         footer: Column(
           children: [
             KFDrawerItem(
-                icon: Icon(Icons.logout, color: Colors.indigo,),
+                icon: Icon(Icons.logout, color: Colors.white,),
                 text: Text(
                   'Çıkış Yap',
-                  style: TextStyle(color: Colors.indigo, fontSize: 16, fontWeight: FontWeight.w400),
+                  style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400),
                 ),
                 onPressed: () async {
                   // await api.logout(LoginApi.userId);
@@ -126,11 +126,11 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
                 }
             ),
             KFDrawerItem(
-              icon: Icon(Icons.person, color: Colors.indigo,),
+              icon: Icon(Icons.person, color: Colors.white,),
               text: Text(
                 // 'Sayın ${LoginApi.userInfo.userName!.toUpperCase()}',
                 'Sayın',
-                style: TextStyle(color: Colors.indigo, fontSize: 16, fontWeight: FontWeight.w700),
+                style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700),
               ),
             )
           ],
@@ -139,7 +139,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
-            colors: [Colors.amberAccent, Colors.indigoAccent],
+            colors: [Colors.indigoAccent, Colors.amberAccent],
             tileMode: TileMode.repeated,
           ),
         ),

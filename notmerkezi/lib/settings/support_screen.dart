@@ -32,6 +32,7 @@ class _SupportScreenState extends State<SupportScreen> {
     //   );
     // }
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.amberAccent,
@@ -59,7 +60,7 @@ class _SupportScreenState extends State<SupportScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                       child: TextFormField(
                         validator: (name) =>
                         name != null && name.length<1
@@ -67,7 +68,6 @@ class _SupportScreenState extends State<SupportScreen> {
                             : null,
                         controller: fullNameController,
                         decoration: InputDecoration(
-                          prefixText: "Adı: ",
                           prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                           labelText: "Adı",
                           border: OutlineInputBorder(
@@ -79,7 +79,7 @@ class _SupportScreenState extends State<SupportScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                       child: TextFormField(
                         validator: (email) =>
                         email != null && !EmailValidator.validate(email)
@@ -90,7 +90,6 @@ class _SupportScreenState extends State<SupportScreen> {
                         ],
                         controller: emailController,
                         decoration: InputDecoration(
-                          prefixText: "E-posta: ",
                           prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                           labelText: "E-posta",
                           border: OutlineInputBorder(
@@ -102,7 +101,7 @@ class _SupportScreenState extends State<SupportScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                       child: TextFormField(
                         validator: (subj) =>
                         subj != null && subj.length<1
@@ -110,7 +109,6 @@ class _SupportScreenState extends State<SupportScreen> {
                             : null,
                         controller: subjectController,
                         decoration: InputDecoration(
-                          prefixText: "Konu: ",
                           prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                           labelText: "Konu",
                           border: OutlineInputBorder(
@@ -122,7 +120,7 @@ class _SupportScreenState extends State<SupportScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                       child: TextFormField(
                         validator: (msg) =>
                         msg != null && msg.length<20
@@ -130,7 +128,6 @@ class _SupportScreenState extends State<SupportScreen> {
                             : null,
                         controller: messageController,
                         decoration: InputDecoration(
-                          prefixText: "Mesaj: ",
                           prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                           labelText: "Mesaj",
                           border: OutlineInputBorder(
@@ -142,26 +139,40 @@ class _SupportScreenState extends State<SupportScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(0, 8, 0, 16),
-                      child: ElevatedButton(
-                        child: Text("Gönder"),
-                        onPressed: () async {
-                          formKey.currentState!.save();
-                          if (formKey.currentState!.validate()) {
-                            Fluttertoast.showToast(
-                                msg: "Destek talebiniz tarafımıza ulaşmıştır.",
-                                toastLength: Toast.LENGTH_SHORT,
-                                gravity: ToastGravity.TOP,
-                                backgroundColor: Colors.amberAccent,
-                                textColor: CupertinoColors.black,
-                                fontSize: 16.0);
-                            formKey.currentState!.reset();
-                            // await api.updateAccount(emailController.text, pwdController.text, phoneController.text);
-                            // Navigator.pop(context);
-                          }
-                        },
+                      padding: const EdgeInsets.only(bottom: 16.0),
+                      child: SizedBox(
+                          width: width*.4,
+                          child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(50)),
+                                  primary: Colors.indigo
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+                                child: Text("Gönder",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 20, color:Colors.amberAccent)),
+                              ),
+                            onPressed: () async {
+                              formKey.currentState!.save();
+                              if (formKey.currentState!.validate()) {
+                                Fluttertoast.showToast(
+                                    msg: "Destek talebiniz tarafımıza ulaşmıştır.",
+                                    toastLength: Toast.LENGTH_LONG,
+                                    gravity: ToastGravity.BOTTOM,
+                                    backgroundColor: Colors.greenAccent,
+                                    textColor: CupertinoColors.black,
+                                    fontSize: 16.0);
+                                formKey.currentState!.reset();
+                                // await api.updateAccount(emailController.text, pwdController.text, phoneController.text);
+                                // Navigator.pop(context);
+                              }
+                            },
+                          )
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

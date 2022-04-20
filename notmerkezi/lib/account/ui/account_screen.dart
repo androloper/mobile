@@ -40,6 +40,7 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     // if(Platform.isIOS){
     //   return GestureDetector(
     //     onTap: () => FocusScope.of(context).unfocus(),
@@ -143,7 +144,10 @@ class _AccountScreenState extends State<AccountScreen> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        backgroundColor: Colors.grey,
         appBar: AppBar(
+          backgroundColor: Colors.indigo,
+          foregroundColor: Colors.amberAccent,
           title: Text("Kişisel Bilgiler"),
         ),
         body: SingleChildScrollView(
@@ -172,7 +176,6 @@ class _AccountScreenState extends State<AccountScreen> {
                         child: TextFormField(
                           controller: fullNameController,
                           decoration: InputDecoration(
-                            prefixText: "Adı: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Adı",
                             hintText: 'Ramazan Baybörek',
@@ -185,11 +188,10 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                         child: TextFormField(
                           controller: birthdayController,
                           decoration: InputDecoration(
-                            prefixText: "Doğum Tarihi: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Doğum Tarihi",
                             hintText: '10/03/1997',
@@ -202,7 +204,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                         child: TextFormField(
                           controller: phoneController,
                           validator: (k) {
@@ -213,7 +215,6 @@ class _AccountScreenState extends State<AccountScreen> {
                             }
                           },
                           decoration: InputDecoration(
-                            prefixText: "Tel. No: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Telefon Numarası",
                             hintText: "5XXXXXXXXX",
@@ -227,11 +228,10 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                         child: TextFormField(
                           controller: universityController,
                           decoration: InputDecoration(
-                            prefixText: "Üni.: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Üniversite",
                             hintText: 'İzmir Ekonomi Üniversitesi',
@@ -244,11 +244,10 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                         child: TextFormField(
                           controller: departmentController,
                           decoration: InputDecoration(
-                            prefixText: "Bölüm: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Bölüm",
                             hintText: 'Yazılım Mühendisliği',
@@ -261,11 +260,10 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+                        padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
                         child: TextFormField(
-                          controller: departmentController,
+                          controller: studentController,
                           decoration: InputDecoration(
-                            prefixText: "Öğr. No: ",
                             prefixStyle: TextStyle(fontWeight: FontWeight.w600),
                             labelText: "Öğrenci Numarası",
                             hintText: '20170601042',
@@ -278,18 +276,28 @@ class _AccountScreenState extends State<AccountScreen> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 8, 0, 16),
-                        child: ElevatedButton(
-                          child: Text("Güncelle"),
-                          onPressed: () async {
-                            formKey.currentState!.save();
-                            if (formKey.currentState!.validate()) {
-                              // await api.updateAccount(emailController.text, pwdController.text, phoneController.text);
-                              Navigator.pop(context);
-                            }
-                          },
+                        padding: const EdgeInsets.only(bottom: 16.0),
+                        child: SizedBox(
+                            width: width*.4,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(50)),
+                                    primary: Colors.indigo
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+                                  child: Text("Güncelle",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          fontSize: 20, color:Colors.amberAccent)),
+                                ),
+                                onPressed: () async {
+                                  //api request
+                                }
+                                )
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

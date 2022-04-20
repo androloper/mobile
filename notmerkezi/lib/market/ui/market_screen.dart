@@ -4,6 +4,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:kf_drawer/kf_drawer.dart';
 import 'package:notmerkezi/market/models/market_demo.dart';
 import 'package:notmerkezi/market/services/market_api.dart';
+import 'package:notmerkezi/market/ui/buy_screen.dart';
 import '../../ui/widgets/loading/loading_screen.dart';
 import '../../ui/widgets/pdf-viewer/pdf_api.dart';
 import '../../ui/widgets/pdf-viewer/pdf_viewer_screen.dart';
@@ -69,7 +70,7 @@ class _MarketScreenState extends State<MarketScreen> {
                             foregroundColor: Colors.black,
                             icon: Icons.account_balance_wallet_outlined,
                             onTap: () async {
-                              // Navigator.push(context, CupertinoPageRoute(builder: (context) => SpecificProductionScreen(locId: widget.location.id,)));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => BuyScreen(data: notes[index],)));
                             },
                           ),
                         ],
