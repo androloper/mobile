@@ -3,6 +3,7 @@ import 'package:notmerkezi/market/ui/market_screen.dart';
 import 'package:notmerkezi/notes/ui/notes_screen.dart';
 import 'package:notmerkezi/settings/settings_screen.dart';
 import 'package:notmerkezi/settings/support_screen.dart';
+import 'package:notmerkezi/settings/wallet_screen.dart';
 
 import '../../../home_screen.dart';
 
@@ -22,7 +23,6 @@ class ClassBuilder {
     // register<AccountScreen>(() => AccountScreen(account: account));
     register<SettingsScreen>(() => SettingsScreen());
     register<SupportScreen>(() => SupportScreen());
-
   }
 
   static dynamic fromString(String type) {

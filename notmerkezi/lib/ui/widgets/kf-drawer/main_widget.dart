@@ -6,6 +6,7 @@ import 'package:notmerkezi/market/ui/market_screen.dart';
 import 'package:notmerkezi/notes/ui/notes_screen.dart';
 import 'package:notmerkezi/settings/settings_screen.dart';
 import 'package:notmerkezi/settings/support_screen.dart';
+import 'package:notmerkezi/settings/wallet_screen.dart';
 import '../../../account/ui/login_screen.dart';
 import '../../../home_screen.dart';
 import 'class_builder.dart';
@@ -40,7 +41,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.white),
+          icon: Icon(Icons.list, color: Colors.white),
           page: MarketScreen(),
         ),
         KFDrawerItem.initWithPage(
@@ -49,7 +50,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.white),
+          icon: Icon(Icons.insert_drive_file, color: Colors.white),
           page: NotesScreen(),
         ),
         // KFDrawerItem.initWithPage(
@@ -67,7 +68,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.white),
+          icon: Icon(Icons.settings, color: Colors.white),
           page: SettingsScreen(),
         ),
         KFDrawerItem.initWithPage(
@@ -76,7 +77,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w400)),
-          icon: Icon(Icons.business, color: Colors.white),
+          icon: Icon(Icons.support, color: Colors.white),
           page: SupportScreen(),
         ),
       ],
@@ -101,7 +102,7 @@ class _MainWidgetState extends State<MainWidget> with TickerProviderStateMixin {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 60.0, top:50),
+                  padding: const EdgeInsets.only(bottom: 20.0, top:20),
                   child: Image.asset(
                     'assets/nobg-logo.png',
                     alignment: Alignment.center,

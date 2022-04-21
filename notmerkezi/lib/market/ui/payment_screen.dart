@@ -146,7 +146,30 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                       ),
                                     ],
                                   ),
-                                )
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 16.0),
+                                  child: SizedBox(
+                                      width: width*.4,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(50)),
+                                              primary: Colors.indigo
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+                                            child: Text("Öde",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    fontSize: 20, color:Colors.amberAccent)),
+                                          ),
+                                          onPressed: () async {
+                                            //api request
+                                          }
+                                      )
+                                  ),
+                                ),
                               ]),
                         ),
                       ),

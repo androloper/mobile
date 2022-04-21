@@ -3,8 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kf_drawer/kf_drawer.dart';
 import 'package:notmerkezi/account/ui/login_screen.dart';
+import 'package:notmerkezi/market/services/market_api.dart';
 import 'package:notmerkezi/settings/about_us_screen.dart';
 import 'package:notmerkezi/settings/support_screen.dart';
+import 'package:notmerkezi/settings/wallet_screen.dart';
 import '../account/models/login.dart';
 import 'change_password_screen.dart';
 
@@ -71,8 +73,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onPressed: () async {
                           Navigator.push(
                               context,
-                              CupertinoPageRoute(
+                              MaterialPageRoute(
                                   builder: (context) => ChangePasswordScreen(credentials: credentials,)));
+                        })),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                margin: EdgeInsets.fromLTRB(24, 12, 24, 6),
+                child: SizedBox(
+                    width: width,
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50)),
+                            primary: Colors.indigo
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(24, 16, 24, 16),
+                          child: Text("Cüzdan",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: height*.03, color: Colors.amberAccent)),
+                        ),
+                        onPressed: () async {
+                          //api request for previous transactions
+                          MarketApis().fetchData();
+                          Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => WalletScreen()));
                         })),
               ),
             ),
@@ -98,7 +127,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onPressed: () async {
                           Navigator.push(
                               context,
-                              CupertinoPageRoute(
+                              MaterialPageRoute(
                                   builder: (context) => AboutUsScreen()));
                         })),
               ),
@@ -125,7 +154,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         onPressed: () async {
                           Navigator.push(
                               context,
-                              CupertinoPageRoute(
+                              MaterialPageRoute(
                                   builder: (context) => SupportScreen()));
                         })),
               ),
@@ -153,7 +182,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           //api request for logout
                           Navigator.pushReplacement(
                               context,
-                              CupertinoPageRoute(
+                              MaterialPageRoute(
                                   builder: (context) => LoginScreen()));
                         })),
               ),
