@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:notmerkezi/market/services/market_api.dart';
 import 'package:notmerkezi/market/ui/sell_screen.dart';
+import 'package:notmerkezi/notes/ui/note_upload_screen.dart';
 
 import '../../market/models/market_demo.dart';
 import '../../ui/widgets/loading/loading_screen.dart';
@@ -35,6 +36,15 @@ class _UploadedNotesScreenState extends State<UploadedNotesScreen> {
           backgroundColor: Colors.indigo,
           foregroundColor: Colors.amberAccent,
           title: Text('Yüklediğim Notlar'),
+          actions: [
+            CupertinoButton(
+              padding: EdgeInsets.all(0),
+              child: Icon(CupertinoIcons.cloud_upload, color: Colors.amberAccent, size: 24),
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => NoteUploadScreen()));
+              },
+            ),
+          ],
         ),
         body: FutureBuilder<List<MarketDemo>>(
             future: api.fetchData(),

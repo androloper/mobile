@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:notmerkezi/market/services/market_api.dart';
 import 'package:notmerkezi/ui/widgets/kf-drawer/class_builder.dart';
@@ -8,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'account/ui/login_screen.dart';
 
 void main() {
+  HttpOverrides.global = MyHttpOverrides();
   ClassBuilder.registerClasses();
   runApp(MyApp());
 }
@@ -48,5 +50,14 @@ class MyApp extends StatelessWidget {
     // debugPrint(account.toString());
     bool acc = prefs.containsKey('userInfo');
     return acc;
+  }
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
   }
 }

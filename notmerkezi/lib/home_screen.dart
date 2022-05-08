@@ -23,12 +23,12 @@ class _HomeScreenState extends State<HomeScreen> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     acc.id = 1;
-    acc.fullName = 'Ramazan Baybörek';
-    acc.birthDate = '10/03/1997';
-    acc.phoneNo = '5060526793';
-    acc.university = 'İzmir Ekonomi Üniversitesi';
-    acc.department = 'Yazılım Mühendisliği';
-    acc.studentNo = '20170601042';
+    // acc.fullName = 'Ramazan Baybörek';
+    // acc.birthDate = '10/03/1997';
+    // acc.phoneNo = '5060526793';
+    // acc.university = 'İzmir Ekonomi Üniversitesi';
+    // acc.department = 'Yazılım Mühendisliği';
+    // acc.studentNo = '20170601042';
     // if (Platform.isIOS) {
     //   return CupertinoPageScaffold(
     //     backgroundColor: Colors.grey,

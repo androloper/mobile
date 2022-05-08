@@ -26,14 +26,12 @@ class _AccountScreenState extends State<AccountScreen> {
 
   @override
   void initState() {
-    fullNameController = TextEditingController(text: widget.account.fullName);
-    birthdayController = TextEditingController(text: widget.account.birthDate);
-    phoneController = TextEditingController(text: widget.account.phoneNo);
-    universityController =
-        TextEditingController(text: widget.account.university);
-    departmentController =
-        TextEditingController(text: widget.account.department);
-    studentController = TextEditingController(text: widget.account.studentNo);
+    // fullNameController = TextEditingController(text: widget.account.fullName);
+    // birthdayController = TextEditingController(text: widget.account.birthDate);
+    // phoneController = TextEditingController(text: widget.account.phoneNo);
+    // universityController = TextEditingController(text: widget.account.university);
+    // departmentController = TextEditingController(text: widget.account.department);
+    // studentController = TextEditingController(text: widget.account.studentNo);
     super.initState();
   }
 

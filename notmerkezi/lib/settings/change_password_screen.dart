@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../account/models/login.dart';
+import 'package:notmerkezi/account/models/user.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
-  final Login credentials;
+  final UserModel credentials;
 
   ChangePasswordScreen({Key? key, required this.credentials}) : super(key: key);
 

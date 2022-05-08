@@ -2,12 +2,12 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kf_drawer/kf_drawer.dart';
+import 'package:notmerkezi/account/models/user.dart';
 import 'package:notmerkezi/account/ui/login_screen.dart';
 import 'package:notmerkezi/market/services/market_api.dart';
 import 'package:notmerkezi/settings/about_us_screen.dart';
 import 'package:notmerkezi/settings/support_screen.dart';
 import 'package:notmerkezi/settings/wallet_screen.dart';
-import '../account/models/login.dart';
 import 'change_password_screen.dart';
 
 class SettingsScreen extends KFDrawerContent {
@@ -18,7 +18,7 @@ class SettingsScreen extends KFDrawerContent {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  Login credentials= Login();
+  UserModel credentials= UserModel();
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

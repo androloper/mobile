@@ -1,33 +1,36 @@
 class Account {
   int? id;
-  String? fullName;
-  String? birthDate;
+  String? email;
+  String? password;
+  String? name;
+  int? schoolId;
+  String? createdDate;
+  String? updatedDate;
   String? phoneNo;
-  String? university;
-  String? department;
-  String? studentNo;
 
-  Account({this.id, this.fullName, this.birthDate, this.phoneNo, this.university, this.department, this.studentNo});
+  Account({this.id, this.email, this.password, this.name, this.schoolId, this.createdDate, this.updatedDate, this.phoneNo});
 
   Account.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    fullName = json['fullName'];
-    birthDate = json['birthDate'];
+    email = json['email'];
+    password = json['password'];
+    name = json['name'];
+    schoolId = json['schoolId'];
+    createdDate = json['createdDate'];
+    updatedDate = json['updatedDate'];
     phoneNo = json['phoneNo'];
-    university = json['university'];
-    department = json['department'];
-    studentNo = json['studentNo'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = Map<String, dynamic>();
     data['id'] = this.id;
-    data['fullName'] = this.fullName;
-    data['birthDate'] = this.birthDate;
+    data['email'] = this.email;
+    data['password'] = this.password;
+    data['name'] = this.name;
+    data['schoolId'] = this.schoolId;
+    data['createdDate'] = this.createdDate;
+    data['updatedDate'] = this.updatedDate;
     data['phoneNo'] = this.phoneNo;
-    data['university'] = this.university;
-    data['department'] = this.department;
-    data['studentNo'] = this.studentNo;
     return data;
   }
 }
