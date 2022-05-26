@@ -13,6 +13,8 @@ class DetailsCubit extends Cubit<DetailsState> {
     Timer(Duration(seconds: 2), () {
       repository!.fetchUserInfo(id).then((details) {
         emit(DetailsLoaded(details: details));
+      }).catchError((error) {
+        emit(DetailsError(err: error));
       });
     });
   }

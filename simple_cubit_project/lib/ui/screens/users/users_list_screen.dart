@@ -25,8 +25,14 @@ class UserListScreen extends StatelessWidget {
         ),
         body: BlocBuilder<UsersCubit, UsersState>(
           builder: (context, state) {
-            if (state is! UsersLoaded) {
+            if (state is UsersInitial) {
               return LoadingScreen();
+            }
+            if (state is UsersLoading) {
+              return LoadingScreen();
+            }
+            if (state is UsersError) {
+              return Center(child: Text('Users cannot find.'));
             }
             final users = (state as UsersLoaded).users;
             return ListView.builder(

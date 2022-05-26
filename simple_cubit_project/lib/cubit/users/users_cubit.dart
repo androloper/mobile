@@ -14,6 +14,8 @@ class UsersCubit extends Cubit<UsersState> {
     Timer(Duration(seconds: 2), () {
       repository!.fetchUsers().then((users) {
         emit(UsersLoaded(users: users));
+      }).catchError((error) {
+        emit(UsersError(err: error));
       });
     });
   }

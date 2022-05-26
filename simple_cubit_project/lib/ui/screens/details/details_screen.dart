@@ -17,8 +17,14 @@ class DetailsScreen extends StatelessWidget {
         ),
         body: BlocBuilder<DetailsCubit, DetailsState>(
           builder: (context, state) {
-            if (state is! DetailsLoaded) {
+            if (state is DetailsInitial) {
               return LoadingScreen();
+            }
+            if (state is DetailsLoading) {
+              return LoadingScreen();
+            }
+            if (state is DetailsError) {
+              return Center(child: Text('User details cannot find.'));
             }
             final details = (state as DetailsLoaded).details;
             return Center(

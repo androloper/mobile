@@ -12,3 +12,8 @@ class DetailsLoaded extends DetailsState {
 
   DetailsLoaded({this.details});
 }
+class DetailsError extends DetailsState {
+  final err;
+
+  DetailsError({this.err});
+}

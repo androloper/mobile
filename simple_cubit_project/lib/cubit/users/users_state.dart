@@ -12,3 +12,8 @@ class UsersLoaded extends UsersState {
 
   UsersLoaded({this.users});
 }
+class UsersError extends UsersState {
+  final err;
+
+  UsersError({this.err});
+}
