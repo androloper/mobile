@@ -24,7 +24,7 @@ class _BuyScreenState extends State<BuyScreen> {
     //     ),
     //   );
     // }
-    var commission = widget.data.extendedPrice!<=100 ? 20 : widget.data.extendedPrice!<=500 ? 50 : 100;
+    var commission = widget.data.extendedPrice!<=100 ? 25 : widget.data.extendedPrice!<=500 ? 50 : 100;
     var vat = (widget.data.extendedPrice! + commission)*.18;
     var total = widget.data.extendedPrice!+commission+vat;
     return Scaffold(

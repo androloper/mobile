@@ -32,7 +32,7 @@ class _SellScreenState extends State<SellScreen> {
     //     ),
     //   );
     // }
-    var commission = int.parse(priceController.text)==0 ? 0 : int.parse(priceController.text)<=100 ? 20 : int.parse(priceController.text)<=500 ? 50 : 100;
+    var commission = int.parse(priceController.text)==0 ? 0 : int.parse(priceController.text)<=100 ? 25 : int.parse(priceController.text)<=500 ? 125 : int.parse(priceController.text)<=1000 ? 250 : 350;
     var vat = int.parse(priceController.text)==0 ? 0 : int.parse(priceController.text)*.18;
     var total = int.parse(priceController.text)==0 ? 0 : int.parse(priceController.text)-commission-vat;
     return Scaffold(

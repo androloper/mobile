@@ -383,11 +383,11 @@ class _LoginScreenState extends State<LoginScreen> {
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.indigo)),
               child: Text("Giriş Yap"),
               onPressed: () async {
-                loginFormKey.currentState!.save();
-                if (loginFormKey.currentState!.validate()) {
-                  try {
-                    final response = await api.login(emailController.text, pwdController.text);
-                    final prefs = await SharedPreferences.getInstance();
+                // loginFormKey.currentState!.save();
+                // if (loginFormKey.currentState!.validate()) {
+                //   try {
+                //     final response = await api.login(emailController.text, pwdController.text);
+                //     final prefs = await SharedPreferences.getInstance();
                     // final messaging = FirebaseMessaging.instance;
                     // messaging.requestPermission(sound: true, alert: true, badge: true, criticalAlert: true);
                     // messaging.getToken().then((value) async {
@@ -396,33 +396,33 @@ class _LoginScreenState extends State<LoginScreen> {
                     // if(response != null){
                     //   var token = prefs.getString('fcmToken');
                     //   Response resp = await api.loginComplete(LoginApi.userId, token!=null ? token : generateRandomString(128));
-                    if (response.statusCode == 200) {
-                      prefs.setString('email', emailController.text);
-                      prefs.setString('password', pwdController.text);
+                    // if (response.statusCode == 200) {
+                    //   prefs.setString('email', emailController.text);
+                    //   prefs.setString('password', pwdController.text);
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (BuildContext context) => MainWidget()));
                       // }
-                    } else {
-                      debugPrint('buraya düştü');
-                    }
-                  } catch (e) {
-                    print(e);
-                    return showCupertinoDialog(
-                        context: context,
-                        builder: (BuildContext context) => CupertinoAlertDialog(
-                              title: Text("Hatalı Deneme"),
-                              content: Text("Yanlış kullanıcı adı veya şifre girdiniz."),
-                              actions: [
-                                CupertinoDialogAction(
-                                  child: Text("Tamam"),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                ),
-                              ],
-                            ));
-                  }
-                }
+              //       } else {
+              //         debugPrint('buraya düştü');
+              //       }
+              //     } catch (e) {
+              //       print(e);
+              //       return showCupertinoDialog(
+              //           context: context,
+              //           builder: (BuildContext context) => CupertinoAlertDialog(
+              //                 title: Text("Hatalı Deneme"),
+              //                 content: Text("Yanlış kullanıcı adı veya şifre girdiniz."),
+              //                 actions: [
+              //                   CupertinoDialogAction(
+              //                     child: Text("Tamam"),
+              //                     onPressed: () {
+              //                       Navigator.pop(context);
+              //                     },
+              //                   ),
+              //                 ],
+              //               ));
+              //     }
+              //   }
               },
             ),
           ),
