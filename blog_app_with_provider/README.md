@@ -1,27 +1,5 @@
 # Flutter Blog App
 
-Table of contents
-=================
-
-<!--ts-->
-   * [About this app](#about-this-app)
-   * [App Screens](#app-screens)
-   * [Getting Started](#getting-started)
-   * [Setting up the Project](#setting-up-the-project)
-   * [Issues](#issues)
-   * [Contributing](#contributing)
-   * [Code of Conduct](#code-of-conduct)
-   * [License](#license)
-<!--te-->
-
-## About this app
-An anonymous blog creation application. It is provides real-time blog creation without any communication and account
-creation. It is Created using Flutter SDK and utilizing Firebase as backend.
-
-<br>
-
-[<img src="bmc-button.png">](https://www.buymeacoffee.com/himanshusharma)
-
 ## App Screens
 Images of the app while using Dark Mode -
 
