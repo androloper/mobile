@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:modbus_client/wSilo.dart';
 
 void main() {
-  runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight
+  ]);
+  //     .then((_) {
+    runApp(MyApp());
+  // });
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -44,13 +50,70 @@ class _MyHomePageState extends State<MyHomePage> {
     double height = MediaQuery.of(context).size.height;
     debugPrint(height.toString());
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        foregroundColor: Theme.of(context).colorScheme.background,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: wSilo(height, 'assets/mob_silo.png', rawMat.text, siloName.text),
+      // appBar: AppBar(
+      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //   foregroundColor: Theme.of(context).colorScheme.background,
+      //   title: Text(widget.title),
+      // ),
+      body: Container(
+        width: width,
+        height: height,
+        child: Stack(
+          children: [
+            Positioned(
+              left: 0,
+              top: 0,
+              child: Container(
+                width: width,
+                height: height,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/mainview.png"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 204,
+              top: 116,
+              child: SizedBox(
+                width: 52,
+                height: 13.18,
+                child: Text(
+                  '100.00',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 214,
+              top: 128,
+              child: SizedBox(
+                width: 42,
+                height: 13.18,
+                child: Text(
+                  '100.00',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 12,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w700,
+                    height: 0,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
